@@ -14,7 +14,7 @@ ${response.description}
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
+- [Contributions](#contributions)
 - [License](#license)
 - [Questions](#questions)
 
@@ -30,7 +30,7 @@ ${response.dependencies}
 
 ${response.license}
 
-## How to Contribute
+## Contributions
 
 ${response.contribution}
 
@@ -40,8 +40,8 @@ ${response.test}
 
 ## Questions 
 
-${response.username}
-${response.email}`
+If you want to reach out to me my email is ${response.email} and to see more of my work, find my GitHub at ${response.username}.
+`
 
 }
 
@@ -123,6 +123,8 @@ inquirer
         renderLicenseBadge(response.licence)
     })
 
+
+    
 
 
 

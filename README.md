@@ -1,38 +1,37 @@
-# <f>
+# <ReadMe Generator>
 
 ## Description
 
-a
+This is a ReadMe generator.
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
+- [Contributions](#contributions)
 - [License](#license)
 - [Questions](#questions)
 
 ## Installation
 
-a
+npm i
 
 
 ## Usage
- a
+ It is free to use so long as you give us credit.
 
 ## License
 
-MIT
+ISC
 
-## How to Contribute
+## Contributions
 
-f
+Email us to contribute.
 
 ## Tests
 
-f
+npm run test
 
 ## Questions 
 
-f
-a
+If you want to reach out to me my email is raheemsenegal@outlook.com and to see more of my work, find my GitHub at rs0579.
