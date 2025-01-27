@@ -1,10 +1,10 @@
 import inquirer from 'inquirer'
 import fs from 'fs'
+//THE ABOVE ALLOWS ME TO USE THE PROPERTIES AND QUALITIES OF THESE NPM PACKAGES. ALTHOUGH FS COMES WITH NODE, YOU STILL HAVE TO IMPORT IT. BUT INQUIRER NEEDS TO BE INSTALLED
 
-
-
+//THE BELOW IS THE MARKDOWN FILE THAT WILL BE FILLED IN USING THE RESPONSES GATHERED IN THE INQUIRER SECTIION
 const generateREADME = (response) => {
-   return `# <${response.project}>
+   return `# ${response.project}
 
 ## Description
 
@@ -16,6 +16,7 @@ ${response.description}
 - [Usage](#usage)
 - [Contributions](#contributions)
 - [License](#license)
+- [Badge](#badge)
 - [Questions](#questions)
 
 ## Installation
@@ -30,6 +31,9 @@ ${response.dependencies}
 
 ${response.license}
 
+## Badge
+${renderLicenseBadge(response.license)}
+
 ## Contributions
 
 ${response.contribution}
@@ -40,11 +44,11 @@ ${response.test}
 
 ## Questions 
 
-If you want to reach out to me my email is ${response.email} and to see more of my work, find my GitHub at ${response.username}.
+If you want to reach out to me my email is ${response.email} and to see more of my work, find my GitHub at ${response.username}. GitHub Link: https://github.com/rs0579 Walkthrough: 
 `
-
 }
 
+//THIS FUNCTION IS SUPPOSED TO RENDER A BADGE FOR THE LICENSE.
 function renderLicenseBadge(license) {
     if (license === "MIT"){
         return "![GitHub license](https://img.shields.io/badge/MIT-license-pink)"
@@ -59,8 +63,7 @@ function renderLicenseBadge(license) {
         }
 }
 
-
-
+//THESE ARE THE QUESTIONS THAT HAVE BEEN IMPORTED BY INQUIRER. 
 inquirer
     .prompt([
         {
@@ -120,8 +123,9 @@ inquirer
     ]).then((response) => {
         const mkREAD = generateREADME(response)
         fs.writeFile('README.md', mkREAD, (err) => err ? console.log("There's something off here") : console.log("Success!"));
-        renderLicenseBadge(response.licence)
     })
+
+    // THE ABOVE .THEN IS LIKE THE RETURN OF THE PROMPT. AFTER I ANSWER THE QUESTION THEN I WANT THIS. THE FS IS AS FOLLOWS: FS WRITEFILE (WHICH CREATES A NEW FILE) FILENAME.MD (TYPE OF FILE AND ITS NAME), THE SOURCE OF THE CONTENT, WHERE WE'RE PULLING THE DATA FROM. AND FINALLY THE ERROR IN AN TERNARY OPERATOR.
 
 
     
