@@ -44,7 +44,7 @@ ${response.test}
 
 ## Questions 
 
-If you want to reach out to me my email is ${response.email} and to see more of my work, find my GitHub at ${response.username}. GitHub Link: https://github.com/rs0579 Walkthrough: 
+[Email me](mailto:${response.email}). You can find my [GitHub](${response.username}).
 `
 }
 
@@ -122,10 +122,10 @@ inquirer
         
     ]).then((response) => {
         const mkREAD = generateREADME(response)
-        fs.writeFile('README.md', mkREAD, (err) => err ? console.log("There's something off here") : console.log("Success!"));
+        fs.writeFile('output/README.md', mkREAD, (err) => err ? console.log("There's something off here") : console.log("Success!"));
     })
 
-    // THE ABOVE .THEN IS LIKE THE RETURN OF THE PROMPT. AFTER I ANSWER THE QUESTION THEN I WANT THIS. THE FS IS AS FOLLOWS: FS WRITEFILE (WHICH CREATES A NEW FILE) FILENAME.MD (TYPE OF FILE AND ITS NAME), THE SOURCE OF THE CONTENT, WHERE WE'RE PULLING THE DATA FROM. AND FINALLY THE ERROR IN AN TERNARY OPERATOR.
+    // THE ABOVE .THEN IS LIKE THE RETURN OF THE PROMPT. AFTER I ANSWER THE QUESTION THEN I WANT THIS. THE FS IS AS FOLLOWS: FS WRITEFILE (WHICH CREATES A NEW FILE) FILENAME.MD (TYPE OF FILE AND ITS NAME), THE SOURCE OF THE CONTENT, WHERE WE'RE PULLING THE DATA FROM. AND FINALLY THE ERROR AND AN TERNARY OPERATOR.
 
 
     
