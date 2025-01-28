@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a ReadMe generator
+This is a ReadMe Generator
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ npm i
 
 
 ## Usage
- You can us the repo so long as you give us credit.
+ You can use the repo so long as you give us credit.
 
 ## License
 
